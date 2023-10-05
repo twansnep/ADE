@@ -119,10 +119,6 @@ header div a:hover {
     color: rgb(255,255,0)
 }
 
-header h1 {
-    color: rgb(255,255,0)
-}
-
 header > div {
     margin-left: 0px;
 }
@@ -135,6 +131,7 @@ header > div {
     font-weight: 600;
     align-items: center;
     color:white;
+    margin: 10%;
 }
 
 .titel:hover {
@@ -314,10 +311,6 @@ main span {
     margin: 0px;
 }
 
-.subtitel {
-    display: block;
-}
-
 .foto-collectie > h2{
     margin: 20px;
 }
@@ -358,8 +351,12 @@ footer > nav > .nav-ul ul a:hover {
 }
 
 .nav-ul {
-    flex-direction: column;
-    justify-content:space-between;
+    width: 15%;
+}
+
+.nav-ul:nth-child(2){
+    display: flex;
+    justify-content: center;
 }
 
 .nav-ul > h2 {
@@ -393,5 +390,4 @@ footer p {
 .logo-footer{
     width: 8em;
     align-self: center;
-    margin-top: 50px;
 }
