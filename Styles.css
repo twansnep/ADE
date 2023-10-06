@@ -228,7 +228,7 @@ main > section h2 { /* h2 cards */
 main > section:nth-child(1) > a > h2 { /* h2 align linker kant */
     align-self: flex-start
 }
-main > section:nth-child(1) > a > svg {
+main > section:nth-child(1) > a > svg { /* icon's  afmeting*/
     width: 100px;
     height: 100px;
     margin-top: auto;
