@@ -61,9 +61,9 @@ h4 {
     color: rgb(255,255,0);
 }
 
-/* li, ol{
+li, ol{
     list-style-type: none;
-} */
+}
 
     /* -- imgs -- */
 
@@ -389,4 +389,8 @@ video {
 }
 .bronvermelding > ul > li > a:hover{
     color: rgb(255,255,0);
+}
+
+.bronvermelding ul{
+    margin:0px;
 }
