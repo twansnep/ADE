@@ -1,4 +1,4 @@
-
+/* ---- ALGEMEEN ---- */
     /* Geeft pagina achtergrond, font, kleur en zorgt voor afbeelding opvulling pagina met margin*/
 body {
     background-color: rgb(23, 23, 23);
@@ -25,14 +25,11 @@ body {
 
 a {
     text-decoration: none;
-    color: white;
+    color:#dee0e7;
 }
-    /* agenda > div info-event */
-ul, ol { 
-    list-style-type: none;
-    padding-left: 0px;
-    padding-right: 10px;
-    margin-top: 0px ; /* Spreekt ook header>nav aan */
+
+main {
+    margin-left: 10px
 }
 
 main a {
@@ -56,15 +53,15 @@ main a:hover {
 }
 
 h3 {
-    font-size: 1,5em;
+    font-size: 1.5em;
 }
 
 h4 {
-    font-size: 1,5em;
+    font-size: 1.2em;
     color: rgb(255,255,0);
 }
 
-    /* ---- imgs */
+    /* -- imgs -- */
 
 .imgicon { /* poster event agenda */
     width: 10%;
@@ -83,17 +80,13 @@ img { /* banner img */
 }
 
 /* ----- header ----- */
-    /* margin zorgt voor afstand links h1. flex en display voor plaatsing naast elkaar. */
+    /* margin zorgt voor afstand links h1. flex-direction en display voor plaatsing naast elkaar. */
 header > div {
-    margin-left: 10px;
-    flex: auto;
+    flex-direction: row;
     display: flex;
 }
-main {
-    margin-left: 10px
-}
 
-    /* zorgt voor positie van nav items naast h1*/
+    /* zorgt voor positie van nav items naast logo*/
 div > nav {
     flex: 1;
     display: flex;
@@ -103,11 +96,11 @@ div > nav {
 header div ul {
     display: flex;
     justify-content: space-around;
-    flex: 1;
+    flex: auto;
     list-style: none;
     flex-wrap: wrap;
     padding: 10px;
-    margin-bottom: 0px;
+    margin:0px;
     font-weight: bold;
 }
 header div ul li:hover,
@@ -143,6 +136,61 @@ header > div {
     height: auto;
     margin: 10px;
     align-items: center;
+}
+
+/* ----- footer ----- */
+footer{
+    margin-top: 15px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer > nav > .nav-ul ul a:hover {
+    color: rgb(255,255,0);
+}
+
+.nav-ul {
+    width: 15%;
+}
+
+.nav-ul:nth-child(2){
+    display: flex;
+    justify-content: center;
+}
+
+.nav-ul > h2 {
+    color: rgb(255,255,0);
+}
+
+footer ul {
+    display: inline;
+    padding: 0;
+    margin-top: 0;
+}
+
+h2 {
+    display: block;
+}
+
+footer > nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+footer a, p {
+    color:rgb(209, 209, 209);
+}
+footer p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.logo-footer{
+    width: 8em;
+    align-self: center;
 }
 
 /* ------ Index onderdeel------- */
@@ -245,10 +293,12 @@ main > section:nth-child(2) { /* positioning div(h2+p) naast img */
 }
 
 .festivalblock ul, ol {
-    list-style-type:none;
     color: rgb(188, 188, 188);
     width: max-content;
+    list-style-type: none;
     padding-left: 0px;
+    padding-right: 10px;
+    margin-top: 0px ;
 }
 
 .info-event {
@@ -335,59 +385,4 @@ video {
 }
 .bronvermelding > ul > li > a:hover{
     color: rgb(255,255,0);
-}
-
-/* ----- footer ----- */
-footer{
-    margin-top: 15px;
-}
-
-footer ul {
-    list-style: none;
-}
-
-footer > nav > .nav-ul ul a:hover {
-    color: rgb(255,255,0);
-}
-
-.nav-ul {
-    width: 15%;
-}
-
-.nav-ul:nth-child(2){
-    display: flex;
-    justify-content: center;
-}
-
-.nav-ul > h2 {
-    color: rgb(255,255,0);
-}
-
-footer ul {
-    display: inline;
-    padding: 0;
-    margin-top: 0;
-}
-
-h2 {
-    display: block;
-}
-
-footer > nav {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-}
-
-footer a, p {
-    color:rgb(209, 209, 209);
-}
-footer p {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.logo-footer{
-    width: 8em;
-    align-self: center;
 }
