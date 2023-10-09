@@ -92,21 +92,22 @@ header > div {
 
     /* zorgt voor positie van nav items naast logo*/
 div > nav {
-    flex: 1;
+    flex: auto;
     display: flex;
     align-items: center;
 }
 
-header div ul {
+header div ul { 
     display: flex;
     justify-content: space-around;
-    flex: auto;
+    flex-direction: row;
+    flex: auto; /* Zorgt voor opnemen van ruimte in de ul door li */
     list-style: none;
-    flex-wrap: wrap;
     padding: 10px;
-    margin:0px;
+    margin: 0px;
     font-weight: bold;
 }
+
 header div ul li:hover,
 header div h1:hover{
     transform: scale(1.1);
@@ -116,17 +117,12 @@ header div a:hover {
     color: rgb(255,255,0)
 }
 
-header > div {
-    margin-left: 0px;
-}
-
+    /* plaatsing titel op banner */
 .titel {
     position: absolute ;
     top: 15rem;
     font-size: 8vw;
-    margin-left: 1em;
     font-weight: 600;
-    align-items: center;
     color:white;
     margin: 10%;
 }
@@ -135,20 +131,16 @@ header > div {
     color: rgb(255,255,0);
 }
 
-.logo {
+.logo { /* grootte en ruimte van logo nav bar */
     width: 5em;
     height: auto;
     margin: 10px;
-    align-items: center;
 }
 
 /* ----- footer ----- */
+
 footer{
     margin-top: 15px;
-}
-
-footer ul {
-    list-style: none;
 }
 
 footer > nav > .nav-ul ul a:hover {
@@ -159,7 +151,7 @@ footer > nav > .nav-ul ul a:hover {
     width: 15%;
 }
 
-.nav-ul:nth-child(2){
+.nav-ul:nth-child(2){ /* centreren logo */
     display: flex;
     justify-content: center;
 }
@@ -168,26 +160,18 @@ footer > nav > .nav-ul ul a:hover {
     color: rgb(255,255,0);
 }
 
-footer ul {
-    display: inline;
+footer ul { /* alignment met h2 */
     padding: 0;
     margin-top: 0;
 }
 
-h2 {
-    display: block;
+footer > nav { /* alignment nav footer */ 
+    display: flex; /* standaard row */
+    align-items: flex-start; /* aligbment top */
+    justify-content: space-around; 
 }
 
-footer > nav {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-}
-
-footer a, p {
-    color:rgb(209, 209, 209);
-}
-footer p {
+footer p { /* copyright positioning */
     margin-bottom: 10px;
     text-align: center;
 }
@@ -296,49 +280,29 @@ main > section:nth-child(2) { /* positioning div(h2+p) naast img */
     color: white;
 }
 
-.festivalblock ul, ol {
+.festivalblock ul, ol { /* details ul/ol styling */
     color: rgb(188, 188, 188);
     width: max-content;
     list-style-type: none;
-    padding-left: 0px;
-    padding-right: 10px;
+    padding-left: 0px; /* alignment h4 met ul */
+    margin-right: 10px;
     margin-top: 0px ;
 }
 
-.info-event {
+.info-event { /* blok details positioning */
     display: flex;
-    align-items: flex-start;
+    align-items: flex-start; /* top aligned */
 }
 
-h5 {
-    margin: 5px;
-    margin-left: 0px;
-    color: rgb(255,255,0);
-}
-
-hr {
+hr { /* lijn tussen events */
     border: 1px solid rgb(94, 94, 94);
     width: 90%;
 }
 
-main span {
-    color: rgb(255,255,0);
-    font-family: poppins;
-    font-weight: bold;
-    text-align: center;
-}
-
-.festivalblock p {
-    margin: 0px;
-}
-
-.festivalblock a {
-    display: flex;
-}
 
 /* ---- Collection page ---- */
 
-.foto-collectie {
+.foto-collectie { /* styling per foto blok */
     display: flex;
     flex-direction: row;
     background-color: rgb(0, 0, 0);
@@ -347,7 +311,7 @@ main span {
     justify-content: flex-end;
 }  
 
-.photodescriptionleft,
+.photodescriptionleft, /* marge en breedte tekst per img */
 .photodescriptionright{
     margin-left: 15px;
     width: 50%;
@@ -355,13 +319,13 @@ main span {
 
 .photodescriptionright{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* center y-as */
+    align-items: center; /* center x-as */
     font-size:x-large;
-    flex-direction: column;
+    flex-direction: column; /* h2 & p colum */
 }
 
-.photodescriptionright > h2, p{
+.photodescriptionright > p{
     margin: 0px;
 }
 
