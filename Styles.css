@@ -216,7 +216,7 @@ main > section:nth-child(1) > a > svg { /* icon's  afmeting*/
     width: 100px;
     height: 100px;
     margin-top: auto;
-
+    margin: 10px;
 }
 
 main > section:nth-child(1) > a .fil1 { /* color icon's card */
